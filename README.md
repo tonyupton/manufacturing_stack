@@ -11,7 +11,6 @@ Inductive Automation's Ignition SCADA platform.
 - **Gateway**: `http://localhost:8088`
 - **HTTPS**: `https://localhost:8043`
 - **OPC UA**: `opc.tcp://localhost:62541`
-- **Database**: PostgreSQL (via `ignition` DB)
 
 ### 2. [PostgreSQL](./postgres)
 Central relational database server with pgAdmin management interface.

@@ -1,6 +1,6 @@
 # Ignition Docker
 
-A Docker Compose setup for running Inductive Automation's Ignition SCADA platform with PostgreSQL database and pgAdmin management interface.
+A Docker Compose setup for running Inductive Automation's Ignition SCADA platform.
 
 ## Services
 
@@ -12,17 +12,6 @@ A Docker Compose setup for running Inductive Automation's Ignition SCADA platfor
   - 8060:8060 (Gateway control)
   - 62541:62541 (OPC UA)
 - **Memory**: 4GB max, 512MB initial
-
-### PostgreSQL Database
-- **Image**: `postgres:latest`
-- **Port**: 5432:5432
-- **Database**: `ignition`
-- **Credentials**: `postgres:password`
-
-### pgAdmin
-- **Image**: `dpage/pgadmin4:latest`
-- **Port**: 5050:80
-- **Credentials**: `admin@example.com:admin`
 
 ## Quick Start
 
@@ -43,5 +32,3 @@ docker-compose down
 ## Access Points
 
 - Ignition Gateway: http://localhost:8088
-- pgAdmin: http://localhost:5050
-- PostgreSQL: localhost:5432
