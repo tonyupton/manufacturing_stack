@@ -34,8 +34,8 @@ services:
       - postgres
     volumes:
       - pgadmin-data:/var/lib/pgadmin # Persistent storage for pgAdmin
-      - ./pgadmin/servers.json:/pgadmin4/servers.json # Predefined server connections
-      - ./pgadmin/pgpass:/var/lib/pgadmin/.pgpass # Predefined password file for pgAdmin
+      # - ./pgadmin/servers.json:/pgadmin4/servers.json # Predefined server connections
+      # - ./pgadmin/pgpass:/var/lib/pgadmin/.pgpass # Predefined password file for pgAdmin
     restart: unless-stopped
 
 volumes:

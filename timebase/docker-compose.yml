@@ -8,7 +8,7 @@ services:
         limits:
           cpus: "1"
           memory: 4096m
-    hostname: historian
+    hostname: timebase-historian
     container_name: timebase-historian
     ports:
       - "4511:4511"
@@ -33,7 +33,7 @@ services:
         limits:
           cpus: "1"
           memory: 2048m
-    hostname: explorer
+    hostname: timebase-explorer
     container_name: timebase-explorer
     ports:
       - "4531:4531"
@@ -41,7 +41,7 @@ services:
     restart: unless-stopped
     volumes:
       - explorer:/explorer
-      # - ./explorer/config/sources.config:/explorer/config/sources.config
+      - ./explorer/config/sources.config:/explorer/config/sources.config
     environment:
       - Settings=/explorer/settings
       - Config=/explorer/config
@@ -57,7 +57,7 @@ services:
         limits:
           cpus: "1"
           memory: 4096m
-    hostname: simulator
+    hostname: timebase-simulator
     container_name: timebase-simulator
     ports:
       - "4521:4521"
@@ -82,7 +82,7 @@ services:
         limits:
           cpus: "1"
           memory: 2048m
-    hostname: opcua
+    hostname: timebase-opcua
     container_name: timebase-opcua
     ports:
       - "4523:4521"
@@ -107,7 +107,7 @@ services:
         limits:
           cpus: "1"
           memory: 2048m
-    hostname: mqtt
+    hostname: timebase-mqtt
     container_name: timebase-mqtt
     ports:
       - "4525:4521"
@@ -132,7 +132,7 @@ services:
         limits:
           cpus: "1"
           memory: 2048m
-    hostname: sparkplugb
+    hostname: timebase-sparkplugb
     container_name: timebase-sparkplugb
     ports:
       - "4527:4521"
@@ -155,7 +155,7 @@ services:
         limits:
           cpus: "2"
           memory: 2048m
-    hostname: pulse
+    hostname: timebase-pulse
     container_name: timebase-pulse
     ports:
       - "4541:4541"
